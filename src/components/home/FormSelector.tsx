@@ -25,7 +25,7 @@ export default function FormSelector() {
 
   const openWhatsApp = () => {
     const text = `Olá! Quero agendar um passeio:\n- Pacote: ${packageOption}\n- Data: ${date?.format('DD/MM/YYYY')}\n- Pessoas: ${people}`;
-    const url = `https://wa.me/5583999999999?text=${encodeURIComponent(text)}`;
+    const url = `https://wa.me/5583993969724?text=${encodeURIComponent(text)}`;
     window.open(url, '_blank');
   };
 

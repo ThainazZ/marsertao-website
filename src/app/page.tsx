@@ -2,6 +2,8 @@ import Image from 'next/image';
 import styles from './page.module.css';
 import Header from '@/components/home/Header';
 import Form from '@/components/home/Form';
+import PackagesAvailable from '@/components/packages/PackagesSection';
+import ExploreSection from '@/components/information/ExploreSection';
 
 export default function Home() {
   return (
@@ -10,7 +12,12 @@ export default function Home() {
         <Header />
         <Form />
       </div>
-      <main className={styles.main}></main>
+      <main className={styles.main}>
+        <PackagesAvailable />
+      </main>
+      <section>
+        <ExploreSection />
+      </section>
       <footer className={styles.footer}>
         <a
           href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"

@@ -1,6 +1,6 @@
 'use client';
 
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
   *, *::before, *::after {
@@ -27,4 +27,12 @@ export const GlobalStyles = createGlobalStyle`
   ul {
     list-style: none;
   }
+`;
+
+export const Paragraph = styled.h6<{ title?: boolean; whiteTheme?: boolean }>`
+  font-size: ${({ title }) => (title ? '2rem' : '1rem')};
+  color: ${({ theme, whiteTheme }) =>
+    whiteTheme ? theme.colors.primary : theme.colors.text};
+  margin: 0.5rem 0;
+  font-weight: ${({ title }) => (title ? 'bold' : 'normal')};
 `;
