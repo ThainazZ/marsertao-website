@@ -3,7 +3,8 @@ import styles from './page.module.css';
 import Header from '@/components/home/Header';
 import Form from '@/components/home/Form';
 import PackagesAvailable from '@/components/packages/PackagesSection';
-import ExploreSection from '@/components/information/ExploreSection';
+import ExploreSection from '@/components/beaches/ExploreSection';
+import Carousel from '@/components/destinations/Carrousel';
 
 export default function Home() {
   return (
@@ -17,6 +18,9 @@ export default function Home() {
       </main>
       <section>
         <ExploreSection />
+      </section>
+      <section>
+        <Carousel />
       </section>
       <footer className={styles.footer}>
         <a
