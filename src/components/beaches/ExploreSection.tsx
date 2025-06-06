@@ -16,7 +16,7 @@ export default function ExploreSection() {
     <ExploreWrapper>
       <ExploreContainer>
         <ExploreTitle>Explore a Paraíba</ExploreTitle>
-        <Paragraph whiteTheme>
+        <Paragraph whiteTheme maxWidth="500px">
           Do mar ao sertão, cada trilha conta uma história. Descubra praias
           paradisíacas, falésias imponentes, vilarejos acolhedores e paisagens
           de tirar o fôlego. Viva experiências autênticas em buggy com quem

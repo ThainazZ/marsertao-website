@@ -2,9 +2,10 @@ import Image from 'next/image';
 import styles from './page.module.css';
 import Header from '@/components/home/Header';
 import Form from '@/components/home/Form';
-import PackagesAvailable from '@/components/packages/PackagesSection';
+import PackagesAvailable from '@/components/tours/PackagesSection';
 import ExploreSection from '@/components/beaches/ExploreSection';
 import Carousel from '@/components/destinations/Carrousel';
+import GuidesSection from '@/components/guides/GuidesSection';
 
 export default function Home() {
   return (
@@ -16,11 +17,14 @@ export default function Home() {
       <main className={styles.main}>
         <PackagesAvailable />
       </main>
-      <section>
+      <section className={styles.beachesSection}>
         <ExploreSection />
       </section>
       <section>
         <Carousel />
+      </section>
+      <section className={styles.guidesSection}>
+        <GuidesSection />
       </section>
       <footer className={styles.footer}>
         <a

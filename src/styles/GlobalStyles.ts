@@ -29,10 +29,15 @@ export const GlobalStyles = createGlobalStyle`
   }
 `;
 
-export const Paragraph = styled.h6<{ title?: boolean; whiteTheme?: boolean }>`
+export const Paragraph = styled.h6<{
+  title?: boolean;
+  whiteTheme?: boolean;
+  maxWidth?: string;
+}>`
   font-size: ${({ title }) => (title ? '2rem' : '1rem')};
   color: ${({ theme, whiteTheme }) =>
     whiteTheme ? theme.colors.primary : theme.colors.text};
   margin: 0.5rem 0;
   font-weight: ${({ title }) => (title ? 'bold' : 'normal')};
+  max-width: ${({ maxWidth }) => (maxWidth ? maxWidth : '100%')};
 `;

@@ -17,18 +17,12 @@ const sharedInputStyle = `
 
 export const ExploreWrapper = styled.section`
   display: flex;
-  align-items: center;
-  width: 100%;
-  padding: 5rem;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
-  background-image: url('/container-bg-2.png');
-  background-size: cover;
+  gap: 3rem;
 `;
 
 export const ExploreTitle = styled.h2`
-  font-size: 4rem;
+  font-size: 3rem;
   color: ${({ theme }) => theme.colors.primary};
   text-align: left;
   text-transform: uppercase;
@@ -37,6 +31,7 @@ export const ExploreTitle = styled.h2`
 export const ExploreContainer = styled.div`
   display: flex;
   max-width: 50%;
+
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;

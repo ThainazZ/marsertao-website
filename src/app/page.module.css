@@ -16,8 +16,8 @@
 
 .container {
   padding: 1rem 1rem 0rem 1rem;
-  min-height: 60vh;
   display: flex;
+  gap: 1rem;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -68,6 +68,33 @@
   padding: 2px 4px;
   border-radius: 4px;
   font-weight: 600;
+}
+
+.beachesSection {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  background-image: url('/container-bg-2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.guidesSection {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  background-image: url(/guias-bg.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .ctas {
