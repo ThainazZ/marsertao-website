@@ -45,7 +45,7 @@ export const GuidesWrapper = styled.div``;
 
 export const GuidesBox = styled.div`
   width: 100%;
-  gap: 3rem;
+  gap: 4rem;
   display: flex;
   padding: 5rem;
   align-items: flex-start;

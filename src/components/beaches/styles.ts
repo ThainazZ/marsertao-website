@@ -19,6 +19,7 @@ export const ExploreWrapper = styled.section`
   display: flex;
   justify-content: center;
   gap: 3rem;
+  flex-wrap: wrap;
 `;
 
 export const ExploreTitle = styled.h2`
@@ -30,8 +31,6 @@ export const ExploreTitle = styled.h2`
 
 export const ExploreContainer = styled.div`
   display: flex;
-  max-width: 50%;
-
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
@@ -41,7 +40,7 @@ export const CardContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 50%;
+  flex-wrap: wrap;
   gap: 1rem;
 `;
 

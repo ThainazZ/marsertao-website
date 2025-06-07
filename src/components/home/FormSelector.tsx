@@ -1,126 +1,108 @@
 'use client';
 
 import { useState } from 'react';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { LocalizationProvider, DatePicker } from '@mui/x-date-pickers';
-import dayjs from 'dayjs';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import CardTravelIcon from '@mui/icons-material/CardTravel';
-import GroupIcon from '@mui/icons-material/Group';
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import {
-  Box,
-  FormControl,
-  InputLabel,
-  MenuItem,
-  Button,
-  Select,
-} from '@mui/material';
-import { Grid } from '@mui/system';
+  Container,
+  Divider,
+  FormField,
+  FormWrapper,
+  WhatsAppButton,
+} from './styles';
+import {
+  CalendarToday,
+  Group,
+  LocationOn,
+  WhatsApp,
+} from '@mui/icons-material';
+import dayjs from 'dayjs';
+import { MenuItem, TextField } from '@mui/material';
+import { DatePicker } from '@mui/x-date-pickers';
 
 export default function FormSelector() {
-  const [packageOption, setPackageOption] = useState('');
+  const [packageOption, setPackageOption] = useState('Litoral Sul');
   const [date, setDate] = useState<dayjs.Dayjs | null>(null);
-  const [people, setPeople] = useState('');
+  const [people, setPeople] = useState('2');
 
   const openWhatsApp = () => {
-    const text = `Olá! Quero agendar um passeio:\n- Pacote: ${packageOption}\n- Data: ${date?.format('DD/MM/YYYY')}\n- Pessoas: ${people}`;
+    const formattedDate = date?.format('DD/MM/YYYY') || 'a definir';
+    const pacote = packageOption || 'a definir';
+    const quantidade = people || 'a definir';
+
+    const text = `Olá! Quero agendar um passeio:\n- Pacote: ${pacote}\n- Data: ${formattedDate}\n- Pessoas: ${quantidade}`;
     const url = `https://wa.me/5583993969724?text=${encodeURIComponent(text)}`;
     window.open(url, '_blank');
   };
 
   return (
-    <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <Box
-        sx={{
-          backgroundColor: '#fff',
-          borderRadius: 4,
-          p: 2,
-          maxWidth: 1000,
-          mx: 0,
-          my: 2,
-        }}
-      >
-        <Grid container spacing={3}>
-          {/* Pacote */}
-          <Grid>
-            <FormControl fullWidth>
-              <InputLabel id="package-label">Pacote</InputLabel>
-              <Select
-                id="package-label"
-                value={packageOption}
-                label="Pacote"
-                defaultValue={packageOption}
-                onChange={(e) => setPackageOption(e.target.value)}
-                startAdornment={<CardTravelIcon sx={{ mr: 1 }} />}
-                sx={{ borderRadius: 2, minWidth: 120 }}
-              >
-                <MenuItem value="praia">Praia</MenuItem>
-                <MenuItem value="buggy">Buggy Tour</MenuItem>
-                <MenuItem value="pôr-do-sol">Pôr do Sol</MenuItem>
-              </Select>
-            </FormControl>
-          </Grid>
+    <Container>
+      <FormWrapper>
+        <FormField>
+          <LocationOn />
+          <div className="field-content">
+            <span className="field-label">Pacote</span>
+            <TextField
+              select
+              fullWidth
+              variant="standard"
+              value={packageOption}
+              onChange={(e) => setPackageOption(e.target.value)}
+              className="input-field"
+              placeholder="Escolha o pacote"
+            >
+              <MenuItem value="Litoral Sul">Litoral Sul</MenuItem>
+              <MenuItem value="Litoral Norte">Litoral Norte</MenuItem>
+              <MenuItem value="Pôr do Sol">Pôr do Sol</MenuItem>
+            </TextField>
+          </div>
+        </FormField>
 
-          {/* Data */}
-          <Grid>
+        <FormField>
+          <CalendarToday />
+          <div className="field-content">
+            <span className="field-label">Data</span>
             <DatePicker
-              label="Data de preferência"
               value={date}
               onChange={(newValue) => setDate(newValue)}
+              format="DD/MM/YYYY"
               slotProps={{
-                textField: {
-                  fullWidth: true,
-                  InputProps: {
-                    startAdornment: <CalendarMonthIcon sx={{ mr: 1 }} />,
-                  },
-                  sx: { borderRadius: 2 },
-                },
+                textField: { variant: 'standard', fullWidth: true },
               }}
             />
-          </Grid>
+          </div>
+        </FormField>
 
-          {/* Integrantes */}
-          <Grid>
-            <FormControl fullWidth>
-              <InputLabel id="people-label">Integrantes</InputLabel>
-              <Select
-                labelId="people-label"
-                value={people}
-                label="Integrantes"
-                onChange={(e) => setPeople(e.target.value)}
-                startAdornment={<GroupIcon sx={{ mr: 1 }} />}
-                sx={{ borderRadius: 2, minWidth: 120 }}
-              >
-                {[1, 2, 3, 4, 5, 6].map((num) => (
-                  <MenuItem key={num} value={num}>
-                    {num} pessoa{num > 1 ? 's' : ''}
-                  </MenuItem>
-                ))}
-              </Select>
-            </FormControl>
-          </Grid>
-
-          {/* Botão Agendar */}
-          <Grid>
-            <Button
-              variant="contained"
-              color="success"
-              onClick={openWhatsApp}
-              startIcon={<WhatsAppIcon />}
-              sx={{
-                borderRadius: 2,
-                height: '100%',
-                fontWeight: 200,
-                fontSize: '1rem',
-                textTransform: 'none',
-              }}
+        <FormField>
+          <Group />
+          <div className="field-content">
+            <span className="field-label">Integrantes</span>
+            <TextField
+              select
+              fullWidth
+              variant="standard"
+              value={people}
+              onChange={(e) => setPeople(e.target.value)}
+              className="input-field"
+              placeholder="Quantidade"
             >
-              Agendar
-            </Button>
-          </Grid>
-        </Grid>
-      </Box>
-    </LocalizationProvider>
+              {[1, 2, 3, 4, 5, 6].map((num) => (
+                <MenuItem key={num} value={num}>
+                  {num} pessoa{num > 1 ? 's' : ''}
+                </MenuItem>
+              ))}
+            </TextField>
+          </div>
+        </FormField>
+
+        <Divider />
+
+        <WhatsAppButton onClick={openWhatsApp}>
+          <WhatsApp />
+          <div className="field-content">
+            <span className="field-label">Agendar</span>
+            <span className="field-placeholder">Atendimento humano</span>
+          </div>
+        </WhatsAppButton>
+      </FormWrapper>
+    </Container>
   );
 }

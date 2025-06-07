@@ -7,7 +7,6 @@ import {
   LocationText,
   Title,
   Description,
-  SeeMore,
 } from './styles';
 
 interface DestinationCardProps {
@@ -42,8 +41,6 @@ export default function DestinationCard({
 
         <Title>{name}</Title>
         <Description>{description}</Description>
-
-        <SeeMore>See more →</SeeMore>
       </CardContent>
     </CardWrapper>
   );

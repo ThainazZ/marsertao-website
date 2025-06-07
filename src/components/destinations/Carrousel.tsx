@@ -9,6 +9,7 @@ import {
   DotsContainer,
   Dot,
 } from './styles';
+import { Paragraph } from '@/styles/GlobalStyles';
 
 export default function Carrousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -36,7 +37,7 @@ export default function Carrousel() {
           alignItems: 'center',
         }}
       >
-        <h2>Os destinos mais encantadores</h2>
+        <Paragraph title>Os destinos mais encantadores</Paragraph>
         <div>
           <NavButton onClick={handlePrev} disabled={currentIndex === 0}>
             ⟨

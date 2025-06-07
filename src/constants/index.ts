@@ -87,11 +87,11 @@ export const DestinationsData = [
 export const GuidesData = [
   {
     id: 1,
-    name: 'Itahuy Junior',
+    name: 'Itauhy Junior',
     expertise: 'História e Cultura Local',
     description:
-      'Com um olhar apaixonado pelas raízes do nosso povo, Itahuy transforma cada passeio em uma verdadeira viagem no tempo. Suas histórias envolventes, curiosidades locais e amor pela cultura fazem de cada trajeto uma aula viva — com emoção, alma e propósito.',
-    image: '/images/guide1.jpg',
+      'Com um olhar apaixonado pelas raízes do nosso povo, Itauhy transforma cada passeio em uma verdadeira viagem no tempo. Suas histórias envolventes, curiosidades locais e amor pela cultura fazem de cada trajeto uma aula viva — com emoção, alma e propósito.',
+    image: '/itauhy.png',
   },
   {
     id: 2,
@@ -99,7 +99,7 @@ export const GuidesData = [
     expertise: 'Belezas Naturais e Fotografia',
     description:
       'Dono de um olhar sensível e técnico, Ivysson guia os visitantes pelos cenários mais deslumbrantes, sempre com o clique certo na ponta dos dedos. Prepare-se para conhecer paisagens que parecem saídas de um cartão-postal, e aprender a eternizá-las com arte e criatividade.',
-    image: '/images/guide2.jpg',
+    image: '/ivysson.png',
   },
   {
     id: 3,
@@ -107,6 +107,6 @@ export const GuidesData = [
     expertise: 'Aventura e Ecoturismo',
     description:
       'Energia de sobra e paixão pela natureza! Elektra é a guia ideal para quem busca trilhas, cachoeiras e adrenalina com segurança e consciência ambiental. Cada passeio com ela é um convite a se reconectar com a terra, e com o seu lado mais aventureiro.',
-    image: '/images/guide3.jpg',
+    image: '/elektra.png',
   },
 ];

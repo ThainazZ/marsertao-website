@@ -1,34 +1,5 @@
 import styled from 'styled-components';
 
-const sharedInputStyle = `
-  height: 48px;
-  padding: 0 1rem;
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  font-size: 1rem;
-  background-color: white;
-  color: #333;
-  width: 100%;
-  box-sizing: border-box;
-
-  &:focus {
-    outline: none;
-    border-color: #40916c;
-  }
-`;
-
-export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1.5rem;
-  justify-content: center;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
-  min-height: 10vh;
-  background-color: ${({ theme }) => theme.colors.primary};
-`;
-
 export const TextGroup = styled.div`
   display: flex;
   flex-direction: column;
@@ -47,70 +18,91 @@ export const Subtitle = styled.h6`
   font-size: 24px;
 `;
 
-export const FormWrapper = styled.div`
-  background-color: white;
-  padding: 2rem;
-  margin: 2rem auto;
-  border-radius: 1rem;
-  max-width: 1000px;
+export const Container = styled.section`
+  background: white;
+  border-radius: 32px 32px 0 0;
+  padding: 2rem 3rem 2rem 3rem;
+  text-align: center;
 `;
 
-export const FormGrid = styled.div`
+export const FormWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
+  background: #fff;
+  border-radius: 50px;
+  border: 1px solid #ddd;
+  padding: 1rem 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
   gap: 1rem;
 `;
 
-export const Field = styled.div`
-  flex: 1 1 280px;
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-`;
-
-export const Label = styled.label`
-  color: ${({ theme }) => theme.colors.text};
-  font-weight: 600;
-  font-size: 0.95rem;
+export const FormField = styled.div`
+  flex: 1;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  white-space: nowrap;
+
+  svg {
+    color: #555;
+  }
+
+  .field-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .field-label {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #222;
+  }
+
+  .field-placeholder {
+    font-size: 0.85rem;
+    color: #999;
+  }
 `;
 
-export const Select = styled.select`
-  ${sharedInputStyle}
-  appearance: none;
+export const Divider = styled.span`
+  width: 1px;
+  height: 2rem;
+  background: #ddd;
 `;
 
-export const Button = styled.button`
-  ${sharedInputStyle}
-  background-color: #25d366;
-  color: white;
+export const WhatsAppButton = styled.a`
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 0.5rem;
-  border: none;
+  color: #25d366;
+  font-weight: bold;
+  text-decoration: none;
   cursor: pointer;
-  font-weight: 600;
-  transition: background-color 0.3s;
-
   &:hover {
-    background-color: #1ebe5d;
-  }
-`;
-
-export const StyledDatePicker = styled.div`
-  .MuiInputBase-root {
-    ${sharedInputStyle}
-    padding: 0;
+    opacity: 0.8;
   }
 
-  input {
-    padding: 0 1rem;
+  svg {
+    font-size: 1.5rem;
   }
 
-  fieldset {
-    border: none;
+  .field-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .field-label {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #222;
+  }
+
+  .field-placeholder {
+    font-size: 0.85rem;
+    color: #999;
   }
 `;

@@ -103,18 +103,6 @@ export const Description = styled.p`
   line-height: 1.4;
 `;
 
-export const SeeMore = styled.span`
-  font-size: 0.9rem;
-  color: ${({ theme }) => theme.colors.text || '#00aaff'};
-  font-weight: 600;
-  margin-top: 0.5rem;
-  cursor: pointer;
-
-  &:hover {
-    text-decoration: underline;
-  }
-`;
-
 export const CardsContainer = styled.div`
   display: flex;
   gap: 1.5rem;
@@ -124,6 +112,7 @@ export const CardsContainer = styled.div`
 `;
 
 export const NavButton = styled.button`
+  min-width: 35px;
   border: none;
   background: #fff;
   border: 1px solid #ddd;
