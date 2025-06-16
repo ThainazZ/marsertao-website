@@ -1,5 +1,5 @@
 'use client';
-import { Paragraph } from '@/styles/GlobalStyles';
+
 import { PackagesData } from '@/constants';
 import PackageCard from './PackageCard';
 import { PackagesContainer, PackagesWrapper } from './styles';
@@ -7,7 +7,7 @@ import { PackagesContainer, PackagesWrapper } from './styles';
 export default function PackagesAvailable() {
   return (
     <PackagesWrapper>
-      <Paragraph title>Qual pacote combina mais com você?</Paragraph>
+      <h6>Qual pacote combina mais com você?</h6>
       <PackagesContainer>
         {PackagesData.map((packageData) => (
           <PackageCard

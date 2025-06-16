@@ -1,5 +1,5 @@
 'use client';
-import { Paragraph } from '@/styles/GlobalStyles';
+
 import {
   ContactContainer,
   ContactWrapper,
@@ -11,9 +11,7 @@ import { Facebook, Twitter, YouTube } from '@mui/icons-material';
 export default function ContactSection() {
   return (
     <ContactWrapper>
-      <Paragraph title whiteTheme>
-        Estamos nas redes:
-      </Paragraph>
+      <h6>Estamos nas redes:</h6>
       <ContactContainer>
         <SocialContainer>
           <IconWrapper
