@@ -11,7 +11,7 @@ import { Facebook, Twitter, YouTube } from '@mui/icons-material';
 export default function ContactSection() {
   return (
     <ContactWrapper>
-      <h6>Estamos nas redes:</h6>
+      <h4>Estamos nas redes:</h4>
       <ContactContainer>
         <SocialContainer>
           <IconWrapper

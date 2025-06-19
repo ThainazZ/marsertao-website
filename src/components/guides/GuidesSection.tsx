@@ -8,7 +8,7 @@ export default function GuidesSection() {
   return (
     <GuidesWrapper>
       <GuidesBox>
-        <h6>Com guias que conhecem esse paraíso</h6>
+        <h4>Com guias que conhecem esse paraíso</h4>
         <GuidesContainer>
           {GuidesData.map((guide) => (
             <GuideCard

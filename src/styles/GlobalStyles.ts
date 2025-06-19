@@ -28,10 +28,30 @@ export const GlobalStyles = createGlobalStyle`
     list-style: none;
   }
 
-  h6 {
+  h3 {
     font-size: 2rem;
     color: ${({ theme }) => theme.colors.text};
-  margin: 0.5rem 0;
-  font-weight: bold;
+    margin: 0.5rem 0;
+    font-weight: bold;
   }
+  
+  h4 {
+    font-size: 2rem;
+    color: ${({ theme }) => theme.colors.primary};
+    margin: 0.5rem 0;
+    font-weight: bold;
+  }
+
+  h5 {
+    color: ${({ theme }) => theme.colors.primary};
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+
+  h6 {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+
 `;

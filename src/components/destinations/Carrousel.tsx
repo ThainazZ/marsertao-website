@@ -36,7 +36,7 @@ export default function Carrousel() {
           alignItems: 'center',
         }}
       >
-        <h6>Os destinos mais encantadores</h6>
+        <h4>Os destinos mais encantadores</h4>
         <div>
           <NavButton onClick={handlePrev} disabled={currentIndex === 0}>
             ⟨
@@ -62,7 +62,7 @@ export default function Carrousel() {
         {Array.from({ length: totalPages }).map((_, index) => (
           <Dot
             key={index}
-            active={index === currentPage}
+            $active={index === currentPage}
             onClick={() => setCurrentIndex(index * cardsPerPage)}
           />
         ))}

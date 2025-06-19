@@ -15,13 +15,13 @@ export default function ExploreSection() {
     <ExploreWrapper>
       <ExploreContainer>
         <ExploreTitle>Explore a Paraíba</ExploreTitle>
-        <h6>
+        <h5>
           Do mar ao sertão, cada trilha conta uma história. Descubra praias
           paradisíacas, falésias imponentes, vilarejos acolhedores e paisagens
           de tirar o fôlego. Viva experiências autênticas em buggy com quem
           conhece cada curva desse paraíso. <br />
           🌴 Embarque com a gente. A aventura começa aqui.
-        </h6>
+        </h5>
       </ExploreContainer>
       <CardContainer>
         {BeachesData.map((beach) => (

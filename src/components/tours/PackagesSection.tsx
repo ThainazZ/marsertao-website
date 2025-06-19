@@ -7,7 +7,7 @@ import { PackagesContainer, PackagesWrapper } from './styles';
 export default function PackagesAvailable() {
   return (
     <PackagesWrapper>
-      <h6>Qual pacote combina mais com você?</h6>
+      <h3>Qual pacote combina mais com você?</h3>
       <PackagesContainer>
         {PackagesData.map((packageData) => (
           <PackageCard

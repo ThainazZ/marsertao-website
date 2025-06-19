@@ -23,7 +23,7 @@ export default function PackageCard({
         width={95}
         height={95}
       />
-      <h3>{name}</h3>
+      <h6>{name}</h6>
       <p>{description}</p>
       <p>Price: ${price}</p>
     </CardContainer>

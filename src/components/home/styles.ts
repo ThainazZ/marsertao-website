@@ -12,7 +12,7 @@ export const Title = styled.h2`
 `;
 // #2794C0
 
-export const Subtitle = styled.h6`
+export const Subtitle = styled.h4`
   color: ${({ theme }) => theme.colors.text};
   font-weight: 200;
   font-size: 24px;
@@ -54,6 +54,7 @@ export const FormField = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    max-width: 150px;
   }
 
   .field-label {

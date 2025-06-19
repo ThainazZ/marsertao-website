@@ -112,7 +112,7 @@ export const CardsContainer = styled.div`
 `;
 
 export const NavButton = styled.button`
-  min-width: 35px;
+  min-width: 45px;
   border: none;
   background: #fff;
   border: 1px solid #ddd;
@@ -140,11 +140,11 @@ export const DotsContainer = styled.div`
   gap: 0.5rem;
 `;
 
-export const Dot = styled.button<{ active: boolean }>`
+export const Dot = styled.button<{ $active: boolean }>`
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: ${({ active }) => (active ? '#333' : '#ccc')};
+  background: ${({ $active }) => ($active ? '#333' : '#ccc')};
   border: none;
   cursor: pointer;
 `;

@@ -34,6 +34,7 @@ export const ExploreContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  width: 50%;
 `;
 
 export const CardContainer = styled.div`
@@ -50,6 +51,10 @@ export const BeachCardStyled = styled.div`
   max-width: 250px;
   gap: 0.5rem;
   align-items: center;
+
+  span {
+    color: ${({ theme }) => theme.colors.primary};
+  }
 `;
 
 export const Button = styled.button`
