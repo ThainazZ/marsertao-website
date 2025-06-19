@@ -12,5 +12,11 @@ declare module 'styled-components' {
       heading: string;
       body: string;
     };
+    sizes: {
+      title: string;
+      subtitle: string;
+      paragraph: string;
+      caption: string;
+    };
   }
 }

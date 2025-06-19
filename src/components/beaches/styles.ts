@@ -23,7 +23,7 @@ export const ExploreWrapper = styled.section`
 `;
 
 export const ExploreTitle = styled.h2`
-  font-size: 3rem;
+  font-size: ${({ theme }) => theme.sizes.title};
   color: ${({ theme }) => theme.colors.primary};
   text-align: left;
   text-transform: uppercase;
@@ -32,9 +32,16 @@ export const ExploreTitle = styled.h2`
 export const ExploreContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
-  width: 50%;
+  max-width: 500px;
+
+  p {
+    text-align: center;
+    font-weight: 300;
+    font-size: ${({ theme }) => theme.sizes.paragraph};
+    color: ${({ theme }) => theme.colors.primary};
+  }
 `;
 
 export const CardContainer = styled.div`

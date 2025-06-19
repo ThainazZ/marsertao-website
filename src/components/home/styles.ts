@@ -21,7 +21,7 @@ export const Subtitle = styled.h4`
 export const Container = styled.section`
   background: white;
   border-radius: 32px 32px 0 0;
-  padding: 2rem 3rem 2rem 3rem;
+  padding: 2rem 2rem 1rem 2rem;
   text-align: center;
 `;
 

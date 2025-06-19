@@ -91,7 +91,7 @@ export const LocationText = styled.p`
   gap: 0.3rem;
 `;
 
-export const Title = styled.h3`
+export const Title = styled.span`
   font-size: 1.1rem;
   font-weight: 700;
   color: ${({ theme }) => theme.colors.text};

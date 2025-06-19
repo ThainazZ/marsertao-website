@@ -17,6 +17,7 @@ export const GlobalStyles = createGlobalStyle`
     font-family: ${({ theme }) => theme.fonts.body};
     background: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.text};
+    overflow-x: hidden;
   }
 
   a {
@@ -29,27 +30,31 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   h3 {
-    font-size: 2rem;
+    font-size: ${({ theme }) => theme.sizes.title};
     color: ${({ theme }) => theme.colors.text};
     margin: 0.5rem 0;
     font-weight: bold;
+    text-align: center;
   }
   
   h4 {
-    font-size: 2rem;
+    font-size: ${({ theme }) => theme.sizes.title};
     color: ${({ theme }) => theme.colors.primary};
     margin: 0.5rem 0;
+    text-align: center;
     font-weight: bold;
   }
 
   h5 {
     color: ${({ theme }) => theme.colors.primary};
     font-size: 1.5rem;
+    text-align: center;
     font-weight: 300;
   }
 
   h6 {
     font-size: 1.2rem;
+    text-align: center;
     font-weight: bold;
   }
 

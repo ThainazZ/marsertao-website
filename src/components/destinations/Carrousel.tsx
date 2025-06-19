@@ -36,7 +36,7 @@ export default function Carrousel() {
           alignItems: 'center',
         }}
       >
-        <h4>Os destinos mais encantadores</h4>
+        <h3>Os destinos mais encantadores</h3>
         <div>
           <NavButton onClick={handlePrev} disabled={currentIndex === 0}>
             ⟨
