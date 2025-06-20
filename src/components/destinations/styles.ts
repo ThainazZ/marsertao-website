@@ -10,11 +10,16 @@ export const CarouselHeader = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
+  flex-wrap: wrap;
 
   h2 {
     font-size: 2rem;
     font-weight: bold;
     color: ${({ theme }) => theme.colors.text};
+  }
+
+  @media screen and (max-width: 708px) {
+    justify-content: center;
   }
 `;
 

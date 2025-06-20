@@ -8,6 +8,7 @@ import {
   NavButton,
   DotsContainer,
   Dot,
+  CarouselHeader,
 } from './styles';
 
 export default function Carrousel() {
@@ -29,13 +30,7 @@ export default function Carrousel() {
 
   return (
     <CarouselWrapper>
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-        }}
-      >
+      <CarouselHeader>
         <h3>Os destinos mais encantadores</h3>
         <div>
           <NavButton onClick={handlePrev} disabled={currentIndex === 0}>
@@ -48,7 +43,7 @@ export default function Carrousel() {
             ⟩
           </NavButton>
         </div>
-      </div>
+      </CarouselHeader>
 
       <CardsContainer>
         {DestinationsData.slice(currentIndex, currentIndex + cardsPerPage).map(

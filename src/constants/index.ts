@@ -82,6 +82,13 @@ export const DestinationsData = [
       'A praia mais oriental do Brasil, com vistas incríveis do pôr do sol.',
     location: 'João Pessoa',
   },
+  {
+    id: 6,
+    name: 'Praia de Carapibus',
+    description:
+      'A praia mais oriental do Brasil, com vistas incríveis do pôr do sol.',
+    location: 'Conde',
+  },
 ];
 
 export const GuidesData = [

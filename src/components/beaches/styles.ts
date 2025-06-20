@@ -25,7 +25,6 @@ export const ExploreWrapper = styled.section`
 export const ExploreTitle = styled.h2`
   font-size: ${({ theme }) => theme.sizes.title};
   color: ${({ theme }) => theme.colors.primary};
-  text-align: left;
   text-transform: uppercase;
 `;
 
