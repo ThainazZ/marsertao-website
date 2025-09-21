@@ -3,18 +3,19 @@ import { BeachCardStyled } from './styles';
 
 interface BeachCardProps {
   name: string;
-  id: number;
+  image: string;
 }
 
-export default function BeachCard({ name, id }: BeachCardProps) {
+export default function BeachCard({ name, image }: BeachCardProps) {
   return (
     <BeachCardStyled>
       <Image
         aria-hidden
-        src={`/praia${id}.png`}
+        src={image}
         alt="Imagem da praia"
         width={175}
         height={230}
+        style={{ borderRadius: '24px' }}
       />
       <span className="beach-name">{name}</span>
     </BeachCardStyled>

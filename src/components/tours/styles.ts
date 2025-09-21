@@ -30,10 +30,13 @@ export const CardContainer = styled.div`
     color: ${({ theme }) => theme.colors.text};
     margin: 0.5rem 1rem;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
   }
 
   h3 {
     color: ${({ theme }) => theme.colors.text};
   }
 `;
-

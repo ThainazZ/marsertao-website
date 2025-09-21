@@ -34,6 +34,7 @@ export const ExploreContainer = styled.div`
   align-items: center;
   justify-content: flex-start;
   max-width: 500px;
+  gap: 1rem;
 
   p {
     text-align: center;

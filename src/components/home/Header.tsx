@@ -7,10 +7,10 @@ export default function Header() {
     <header className={styles.header}>
       <Image
         aria-hidden
-        src="/logo.png"
+        src="/logo.svg"
         alt="Logo do Mar & Sertão"
-        width={125}
-        height={95}
+        width={195}
+        height={100}
       />
       <Menu />
     </header>

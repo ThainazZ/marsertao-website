@@ -14,19 +14,20 @@ interface DestinationCardProps {
   id: number;
   description: string;
   location: string;
+  image: string; 
 }
 
 export default function DestinationCard({
   name,
-  id,
   description,
   location,
+  image,
 }: DestinationCardProps) {
   return (
     <CardWrapper>
       <CardImage>
         <Image
-          src={`/destination${id}.png`}
+          src={image}
           alt={`Imagem do destino ${name}`}
           fill
           style={{ objectFit: 'cover' }}

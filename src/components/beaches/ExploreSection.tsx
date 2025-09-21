@@ -23,7 +23,7 @@ export default function ExploreSection() {
       </ExploreContainer>
       <CardContainer>
         {BeachesData.map((beach) => (
-          <BeachCard key={beach.id} id={beach.id} name={beach.name} />
+          <BeachCard key={beach.id} image={beach.image} name={beach.name} />
         ))}
       </CardContainer>
     </ExploreWrapper>

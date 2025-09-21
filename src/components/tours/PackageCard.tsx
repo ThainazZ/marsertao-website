@@ -1,11 +1,15 @@
 import Image from 'next/image';
 import { CardContainer } from './styles';
+import IconButton from '@mui/material/IconButton';
+import OpenInFullIcon from '@mui/icons-material/OpenInFull';
 
 export interface PackageCardProps {
   name: string;
   description: string;
   price: number;
   id: number;
+  number: string;
+  onClick: () => void;
 }
 
 export default function PackageCard({
@@ -13,6 +17,8 @@ export default function PackageCard({
   description,
   price,
   id,
+  number,
+  onClick,
 }: PackageCardProps) {
   return (
     <CardContainer>
@@ -25,7 +31,16 @@ export default function PackageCard({
       />
       <h6>{name}</h6>
       <p>{description}</p>
-      <p>Price: ${price}</p>
+      <p>
+        R${price}, para até {number} pessoas
+        <IconButton
+          onClick={onClick}
+          aria-label="Expandir"
+          style={{ marginTop: '8px' }}
+        >
+          <OpenInFullIcon />
+        </IconButton>
+      </p>
     </CardContainer>
   );
 }

@@ -14,7 +14,7 @@ export const CarouselHeader = styled.div`
 
   h2 {
     font-size: 2rem;
-    font-weight: bold;
+    font-weight: bold; 
     color: ${({ theme }) => theme.colors.text};
   }
 

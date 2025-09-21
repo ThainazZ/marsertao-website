@@ -21,8 +21,12 @@ export const Subtitle = styled.h4`
 export const Container = styled.section`
   background: white;
   border-radius: 32px 32px 0 0;
-  padding: 2rem 2rem 1rem 2rem;
+  padding: 2rem 5rem 1rem 5rem;
   text-align: center;
+
+  @media (max-width: 768px) {
+    padding: 2rem 2rem 1rem 2rem;
+  }
 `;
 
 export const FormWrapper = styled.div`
@@ -31,16 +35,19 @@ export const FormWrapper = styled.div`
   background: #fff;
   border-radius: 50px;
   border: 1px solid #ddd;
-  padding: 1rem 1.5rem;
+  padding: 2rem 1.5rem;
   justify-content: space-between;
   align-items: center;
-  max-width: 900px;
+  max-width: 1500px;
   margin: 0 auto;
-  gap: 1rem;
+  gap: 1.5rem;
+
+  @media (max-width: 1201px) {
+    justify-content: center;
+  }
 `;
 
 export const FormField = styled.div`
-  flex: 1;
   display: flex;
   align-items: center;
   gap: 0.5rem;
